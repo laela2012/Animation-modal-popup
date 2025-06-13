@@ -60,3 +60,28 @@ button:hover {
     display: block;
     width: 100%;
 }
+
+.modal .card h2 {
+    margin-bottom: 2rem;
+}
+
+.modal .card form {
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 0.7rem;
+}
+
+.modal .card input[type="email"] {
+    width: 100%;
+    background: #eee;
+    padding: 1rem;
+    outline: none;
+}
+
+.modal .card input[type="submit"] {
+    background: peru;
+    color: white;
+    padding: 0 1.6rem;
+}
