@@ -35,6 +35,7 @@ button:hover {
     place-items: center;
     background: rgba(0, 0, 0, 0.3);
     display: none;
+    animation: openModal 2s linear forwards;
 }
 
 .modal .card {
@@ -87,6 +88,32 @@ button:hover {
     padding: 0 1.6rem;
 }
 
+/* ANIMATION */
+/* open modal */
+@keyframes openModal {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* close modal */
+@keyframes closeModal {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.close-modal-animation {
+    animation: closeModal 1s linear forwards;
+}
+
+/* MEDIA QUERIES */
 @media screen and (max-width: 800px) {
     .modal .card {
         flex-direction: column;
