@@ -17,6 +17,7 @@ function closeModal(){
     modal.classList.add('close-modal-animation');
     setTimeout(() => {
         modal.style.display = 'none';
+        window.location.reload();
     }, 1000);
 }
 
