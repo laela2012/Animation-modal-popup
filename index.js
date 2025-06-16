@@ -1,6 +1,7 @@
 const openBtn = document.querySelector('button');
 const closeBtn = document.querySelector('#close');
 const modal = document.querySelector('.modal');
+const form = document.querySelector('form');
 
 // OPEN MODAL
 openBtn.addEventListener('click', openModal);
@@ -18,7 +19,7 @@ function closeModal(){
     setTimeout(() => {
         modal.style.display = 'none';
         window.location.reload();
-    }, 1000);
+    }, 500);
 }
 
 // CLOSE MODAL ANYWHERE OUTSIDE THE FORM
@@ -27,3 +28,15 @@ modal.addEventListener('click', function(e){
         closeModal();
     }
 })
+
+// THANKYOU MESSAGE AFTER SUBSCRIPTION
+form.addEventListener('submit', submitForm);
+
+function submitForm(){
+    const card = document.querySelector('.card');
+    card.innerHTML = "<h1>Thanks for your Subscription!</h1>";
+    setTimeout(() => {
+        closeModal();
+    }, 3000);
+
+}
